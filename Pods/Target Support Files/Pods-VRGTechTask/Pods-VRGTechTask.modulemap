@@ -1,0 +1,6 @@
+framework module Pods_VRGTechTask {
+  umbrella header "Pods-VRGTechTask-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22670E30D2C5C74EEE0BA17C /* Pods_VRGTechTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2F27F8F18D8544C8C721F9 /* Pods_VRGTechTask.framework */; };
+		2C217893121C9629D1E59C6C /* Pods_VRGTechTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571B37278934406AD91E50EC /* Pods_VRGTechTaskTests.framework */; };
 		9369D74622C274280061D352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D74522C274280061D352 /* AppDelegate.swift */; };
 		9369D74822C274280061D352 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D74722C274280061D352 /* NewsViewController.swift */; };
 		9369D74D22C274280061D352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9369D74B22C274280061D352 /* Main.storyboard */; };
@@ -27,6 +29,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04BFCACD57023E29613FFDB2 /* Pods-VRGTechTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRGTechTaskTests.debug.xcconfig"; path = "Target Support Files/Pods-VRGTechTaskTests/Pods-VRGTechTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D2F27F8F18D8544C8C721F9 /* Pods_VRGTechTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VRGTechTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		571B37278934406AD91E50EC /* Pods_VRGTechTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VRGTechTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63BDDB6322718C6C4A1FFEB5 /* Pods-VRGTechTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRGTechTask.release.xcconfig"; path = "Target Support Files/Pods-VRGTechTask/Pods-VRGTechTask.release.xcconfig"; sourceTree = "<group>"; };
+		68E7A4F5FAFE4132C9B84DF9 /* Pods-VRGTechTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRGTechTaskTests.release.xcconfig"; path = "Target Support Files/Pods-VRGTechTaskTests/Pods-VRGTechTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		760BE9A87CD13D5F4BB60F06 /* Pods-VRGTechTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRGTechTask.debug.xcconfig"; path = "Target Support Files/Pods-VRGTechTask/Pods-VRGTechTask.debug.xcconfig"; sourceTree = "<group>"; };
 		9369D74222C274280061D352 /* VRGTechTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRGTechTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9369D74522C274280061D352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9369D74722C274280061D352 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22670E30D2C5C74EEE0BA17C /* Pods_VRGTechTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C217893121C9629D1E59C6C /* Pods_VRGTechTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CFEF210CA2CE3485CFFB52F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				760BE9A87CD13D5F4BB60F06 /* Pods-VRGTechTask.debug.xcconfig */,
+				63BDDB6322718C6C4A1FFEB5 /* Pods-VRGTechTask.release.xcconfig */,
+				04BFCACD57023E29613FFDB2 /* Pods-VRGTechTaskTests.debug.xcconfig */,
+				68E7A4F5FAFE4132C9B84DF9 /* Pods-VRGTechTaskTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		606629D6A277FC5E42E4479B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D2F27F8F18D8544C8C721F9 /* Pods_VRGTechTask.framework */,
+				571B37278934406AD91E50EC /* Pods_VRGTechTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9369D73922C274280061D352 = {
 			isa = PBXGroup;
 			children = (
 				9369D74422C274280061D352 /* VRGTechTask */,
 				9369D75B22C274290061D352 /* VRGTechTaskTests */,
 				9369D74322C274280061D352 /* Products */,
+				4CFEF210CA2CE3485CFFB52F /* Pods */,
+				606629D6A277FC5E42E4479B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9369D76122C274290061D352 /* Build configuration list for PBXNativeTarget "VRGTechTask" */;
 			buildPhases = (
+				490F84835213C744E9EBCEA5 /* [CP] Check Pods Manifest.lock */,
 				9369D73E22C274280061D352 /* Sources */,
 				9369D73F22C274280061D352 /* Frameworks */,
 				9369D74022C274280061D352 /* Resources */,
+				4F9A189E57C6E8C71673655C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9369D76422C274290061D352 /* Build configuration list for PBXNativeTarget "VRGTechTaskTests" */;
 			buildPhases = (
+				FD2F847F02E7E11A9781F354 /* [CP] Check Pods Manifest.lock */,
 				9369D75422C274290061D352 /* Sources */,
 				9369D75522C274290061D352 /* Frameworks */,
 				9369D75622C274290061D352 /* Resources */,
@@ -194,6 +230,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		490F84835213C744E9EBCEA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VRGTechTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F9A189E57C6E8C71673655C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VRGTechTask/Pods-VRGTechTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VRGTechTask/Pods-VRGTechTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VRGTechTask/Pods-VRGTechTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD2F847F02E7E11A9781F354 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VRGTechTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9369D73E22C274280061D352 /* Sources */ = {
@@ -362,6 +462,7 @@
 		};
 		9369D76222C274290061D352 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 760BE9A87CD13D5F4BB60F06 /* Pods-VRGTechTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,6 +480,7 @@
 		};
 		9369D76322C274290061D352 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63BDDB6322718C6C4A1FFEB5 /* Pods-VRGTechTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +498,7 @@
 		};
 		9369D76522C274290061D352 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04BFCACD57023E29613FFDB2 /* Pods-VRGTechTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -416,6 +519,7 @@
 		};
 		9369D76622C274290061D352 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68E7A4F5FAFE4132C9B84DF9 /* Pods-VRGTechTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

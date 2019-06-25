@@ -1,0 +1,6 @@
+framework module Pods_VRGTechTaskTests {
+  umbrella header "Pods-VRGTechTaskTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
