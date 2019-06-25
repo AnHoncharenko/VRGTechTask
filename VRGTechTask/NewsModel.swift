@@ -12,8 +12,8 @@ struct NewsModel {
     var title: String
     var subtitle: String
     
-    init() {
-        self.title = "123"
-        self.subtitle = "321"
+    init(title: String, subtitle: String) {
+        self.title = title
+        self.subtitle = subtitle
     }
 }
