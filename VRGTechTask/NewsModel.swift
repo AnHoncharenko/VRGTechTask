@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 struct NewsModel {
     var title: String
@@ -16,4 +17,11 @@ struct NewsModel {
         self.title = title
         self.subtitle = subtitle
     }
+    
+    init(json: JSON) {
+        title = json["title"].stringValue
+        subtitle = json["abstract"].stringValue
+    }
+    
+    
 }

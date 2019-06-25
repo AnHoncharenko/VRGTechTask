@@ -10,14 +10,17 @@ import UIKit
 
 class NewsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var data: [NewsModel] = [NewsModel.init(title: "12", subtitle: "45")]
+    var data: [NewsModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        WebService.shared.mostPopular(cl: {
+            self.data = $0
+            self.tableView.reloadData()
+        })
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        data.append(NewsModel.init(title: "4234342353235p982875762i756726q7562765ygwgtb3hb", subtitle: "923o8uuwe322342342r24rofkhwjkhfkjejkghjkehghenjn0"))
     }
 }
 
