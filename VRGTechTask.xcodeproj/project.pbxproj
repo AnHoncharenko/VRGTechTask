@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9369D74622C274280061D352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D74522C274280061D352 /* AppDelegate.swift */; };
-		9369D74822C274280061D352 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D74722C274280061D352 /* FirstViewController.swift */; };
-		9369D74A22C274280061D352 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D74922C274280061D352 /* SecondViewController.swift */; };
+		9369D74822C274280061D352 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D74722C274280061D352 /* NewsViewController.swift */; };
 		9369D74D22C274280061D352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9369D74B22C274280061D352 /* Main.storyboard */; };
 		9369D74F22C274290061D352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9369D74E22C274290061D352 /* Assets.xcassets */; };
 		9369D75222C274290061D352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9369D75022C274290061D352 /* LaunchScreen.storyboard */; };
 		9369D75D22C274290061D352 /* VRGTechTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D75C22C274290061D352 /* VRGTechTaskTests.swift */; };
+		9369D76822C284250061D352 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D76722C284250061D352 /* NewsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +29,7 @@
 /* Begin PBXFileReference section */
 		9369D74222C274280061D352 /* VRGTechTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRGTechTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9369D74522C274280061D352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9369D74722C274280061D352 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		9369D74922C274280061D352 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9369D74722C274280061D352 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		9369D74C22C274280061D352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9369D74E22C274290061D352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9369D75122C274290061D352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		9369D75822C274290061D352 /* VRGTechTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRGTechTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9369D75C22C274290061D352 /* VRGTechTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRGTechTaskTests.swift; sourceTree = "<group>"; };
 		9369D75E22C274290061D352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9369D76722C284250061D352 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				9369D74522C274280061D352 /* AppDelegate.swift */,
-				9369D74722C274280061D352 /* FirstViewController.swift */,
-				9369D74922C274280061D352 /* SecondViewController.swift */,
+				9369D76722C284250061D352 /* NewsModel.swift */,
+				9369D74722C274280061D352 /* NewsViewController.swift */,
 				9369D74B22C274280061D352 /* Main.storyboard */,
 				9369D74E22C274290061D352 /* Assets.xcassets */,
 				9369D75022C274290061D352 /* LaunchScreen.storyboard */,
@@ -200,9 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9369D74A22C274280061D352 /* SecondViewController.swift in Sources */,
+				9369D76822C284250061D352 /* NewsModel.swift in Sources */,
 				9369D74622C274280061D352 /* AppDelegate.swift in Sources */,
-				9369D74822C274280061D352 /* FirstViewController.swift in Sources */,
+				9369D74822C274280061D352 /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

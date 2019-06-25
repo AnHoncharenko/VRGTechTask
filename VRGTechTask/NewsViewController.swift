@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  VRGTechTask
 //
 //  Created by Anton Honcharenko on 6/25/19.
@@ -8,13 +8,21 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
-
+class NewsViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 
+}
+
+class NewsCell: UITableViewCell {
+    
+    
+    func givingData(x:[NewsModel]) {
+//        paren.text = x[0].caption
+    }
 }
 
