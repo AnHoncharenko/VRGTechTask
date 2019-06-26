@@ -14,10 +14,16 @@ class NewsViewController: UIViewController {
     var contentType: MostPopularType = .shared
     
     
+    
     static func create(contentType: MostPopularType) -> NewsViewController {
         let storydoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storydoard.instantiateViewController(withIdentifier: "news") as! NewsViewController
         vc.contentType = contentType
+        switch contentType {
+        case .emailed: vc.title = "most emailed"; vc.tabBarItem.image = UIImage(named: "emailed")
+        case .shared: vc.title = "most shared"; vc.tabBarItem.image = UIImage(named: "shared")
+        case .viewed: vc.title = "most viewed"; vc.tabBarItem.image = UIImage(named: "viewed")
+        }
         return vc
     }
     
@@ -30,11 +36,6 @@ class NewsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        switch contentType {
-        case .emailed: title = "most emailed"
-        case .shared: title = "most shared"
-        case .viewed: title = "most viewed"
-        }
     }
 }
 

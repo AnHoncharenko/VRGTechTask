@@ -16,9 +16,13 @@ class MainTabBar: UITabBarController, UITabBarControllerDelegate {
         self.viewControllers = [NewsViewController.create(contentType: .emailed),
                                 NewsViewController.create(contentType: .shared),
                                 NewsViewController.create(contentType: .viewed)]
+        title = selectedViewController?.title
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         title = viewController.title
     }
+    
+    
+    
 }
