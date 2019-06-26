@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-VRGTechTask/Pods-VRGTechTask-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
