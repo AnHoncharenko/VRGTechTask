@@ -29,6 +29,11 @@ class NewsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
+        switch contentType {
+        case .emailed: title = "most emailed"
+        case .shared: title = "most shared"
+        case .viewed: title = "most viewed"
+        }
     }
 }
 

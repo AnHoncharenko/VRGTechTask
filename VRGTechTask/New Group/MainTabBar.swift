@@ -8,15 +8,17 @@
 
 import UIKit
 
-class MainTabBar: UITabBarController {
+class MainTabBar: UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.delegate = self
         self.viewControllers = [NewsViewController.create(contentType: .emailed),
                                 NewsViewController.create(contentType: .shared),
                                 NewsViewController.create(contentType: .viewed)]
-        
     }
     
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        title = viewController.title
+    }
 }
