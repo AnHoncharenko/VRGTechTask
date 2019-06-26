@@ -12,9 +12,16 @@ import SwiftyJSON
 class WebService {
     static let shared = WebService()
     let defaultUrlParam = ["api-key":Config.apiKey,]
+
     
-    func mostPopular(cl: @escaping ([NewsModel]) -> Void) {
-        let url = Config.baseUrl + "/svc/mostpopular/v2/shared/30.json"
+    func mostPopular(type: MostPopularType, cl: @escaping ([NewsModel]) -> Void) {
+        let typeString: String
+        switch type {
+        case .emailed: typeString = "emailed"
+        case .shared: typeString = "shared"
+        case .viewed: typeString = "viewed"
+        }
+        let url = Config.baseUrl + "/svc/mostpopular/v2/\(typeString)/30.json"
         Alamofire.request(url, method: .get, parameters: defaultUrlParam)
             .validate(statusCode: 200..<300)
             .responseJSON { response in

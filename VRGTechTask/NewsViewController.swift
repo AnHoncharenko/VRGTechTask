@@ -11,10 +11,18 @@ import UIKit
 class NewsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var data: [NewsModel] = []
+    var contentType: MostPopularType = .shared
+    
+    static func create(contentType: MostPopularType) -> NewsViewController {
+        let storydoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storydoard.instantiateViewController(withIdentifier: "news") as! NewsViewController
+        vc.contentType = contentType
+        return vc
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        WebService.shared.mostPopular(cl: {
+        WebService.shared.mostPopular(type: contentType, cl: {
             self.data = $0
             self.tableView.reloadData()
         })

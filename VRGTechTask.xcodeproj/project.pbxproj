@@ -18,6 +18,8 @@
 		9369D76822C284250061D352 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D76722C284250061D352 /* NewsModel.swift */; };
 		9369D76A22C299A80061D352 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D76922C299A80061D352 /* WebService.swift */; };
 		9369D76C22C29B7E0061D352 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D76B22C29B7E0061D352 /* Config.swift */; };
+		9369D77022C2A6800061D352 /* NewsRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D76F22C2A6800061D352 /* NewsRequestType.swift */; };
+		9369D77322C3509E0061D352 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D77222C3509E0061D352 /* MainTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		9369D76722C284250061D352 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		9369D76922C299A80061D352 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = /Users/honcharenko/Source/VRGTechTask/VRGTechTask/WebService.swift; sourceTree = "<absolute>"; };
 		9369D76B22C29B7E0061D352 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Config.swift; path = /Users/honcharenko/Source/VRGTechTask/VRGTechTask/Config.swift; sourceTree = "<absolute>"; };
+		9369D76F22C2A6800061D352 /* NewsRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequestType.swift; sourceTree = "<group>"; };
+		9369D77222C3509E0061D352 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		9369D74422C274280061D352 /* VRGTechTask */ = {
 			isa = PBXGroup;
 			children = (
+				9369D77122C3506F0061D352 /* New Group */,
 				9369D76B22C29B7E0061D352 /* Config.swift */,
 				9369D74522C274280061D352 /* AppDelegate.swift */,
 				9369D76922C299A80061D352 /* WebService.swift */,
@@ -124,6 +129,7 @@
 				9369D74E22C274290061D352 /* Assets.xcassets */,
 				9369D75022C274290061D352 /* LaunchScreen.storyboard */,
 				9369D75322C274290061D352 /* Info.plist */,
+				9369D76F22C2A6800061D352 /* NewsRequestType.swift */,
 			);
 			path = VRGTechTask;
 			sourceTree = "<group>";
@@ -135,6 +141,14 @@
 				9369D75E22C274290061D352 /* Info.plist */,
 			);
 			path = VRGTechTaskTests;
+			sourceTree = "<group>";
+		};
+		9369D77122C3506F0061D352 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				9369D77222C3509E0061D352 /* MainTabBar.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,7 +319,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9369D77022C2A6800061D352 /* NewsRequestType.swift in Sources */,
 				9369D76822C284250061D352 /* NewsModel.swift in Sources */,
+				9369D77322C3509E0061D352 /* MainTabBar.swift in Sources */,
 				9369D74622C274280061D352 /* AppDelegate.swift in Sources */,
 				9369D76C22C29B7E0061D352 /* Config.swift in Sources */,
 				9369D76A22C299A80061D352 /* WebService.swift in Sources */,

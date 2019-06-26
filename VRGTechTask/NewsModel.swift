@@ -9,6 +9,8 @@
 import Foundation
 import SwiftyJSON
 
+
+
 struct NewsModel {
     var title: String
     var subtitle: String
