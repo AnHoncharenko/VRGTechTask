@@ -45,28 +45,16 @@ extension NewsViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsCell
-        cell.givingData(model: [data[indexPath.row]])
+        cell.givingData(model: data[indexPath.row])
         return cell
     }
 }
 extension NewsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch contentType {
-        case .emailed: ArticleDetailsViewController.create(viewController: self, url: data[indexPath.row].url)
-        case .shared: ArticleDetailsViewController.create(viewController: self, url: data[indexPath.row].url)
-        case .viewed: ArticleDetailsViewController.create(viewController: self, url: data[indexPath.row].url)
-        }
+        tableView.deselectRow(at: indexPath, animated: true)
+        ArticleDetailsViewController.show(on: self, url: data[indexPath.row].url)
     }
 }
 
-class NewsCell: UITableViewCell {
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var subtitle: UILabel!
-    
-    
-    func givingData(model: [NewsModel]) {
-        title.text = model[0].title
-        subtitle.text = model[0].subtitle
-    }
-}
+
 

@@ -21,6 +21,7 @@
 		9369D77022C2A6800061D352 /* NewsRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D76F22C2A6800061D352 /* NewsRequestType.swift */; };
 		9369D77322C3509E0061D352 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D77222C3509E0061D352 /* MainTabBar.swift */; };
 		9369D77522C35E2B0061D352 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D77422C35E2B0061D352 /* ArticleDetailsViewController.swift */; };
+		9369D77722C371690061D352 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D77622C371690061D352 /* NewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		9369D76F22C2A6800061D352 /* NewsRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequestType.swift; sourceTree = "<group>"; };
 		9369D77222C3509E0061D352 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		9369D77422C35E2B0061D352 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
+		9369D77622C371690061D352 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				9369D77122C3506F0061D352 /* New Group */,
 				9369D76B22C29B7E0061D352 /* Config.swift */,
 				9369D74522C274280061D352 /* AppDelegate.swift */,
+				9369D77622C371690061D352 /* NewsCell.swift */,
 				9369D76922C299A80061D352 /* WebService.swift */,
 				9369D76722C284250061D352 /* NewsModel.swift */,
 				9369D74722C274280061D352 /* NewsViewController.swift */,
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9369D77022C2A6800061D352 /* NewsRequestType.swift in Sources */,
+				9369D77722C371690061D352 /* NewsCell.swift in Sources */,
 				9369D76822C284250061D352 /* NewsModel.swift in Sources */,
 				9369D77322C3509E0061D352 /* MainTabBar.swift in Sources */,
 				9369D74622C274280061D352 /* AppDelegate.swift in Sources */,

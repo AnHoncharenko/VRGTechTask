@@ -13,7 +13,7 @@ class ArticleDetailsViewController: UIViewController {
     var data:[NewsModel] = []
     var url:String = ""
     
-    static func create(viewController: UIViewController, url: String) {
+    static func show(on viewController: UIViewController, url: String) {
         let storydoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storydoard.instantiateViewController(withIdentifier: "details") as! ArticleDetailsViewController
         vc.url = url
