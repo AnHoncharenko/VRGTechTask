@@ -13,6 +13,7 @@ class NewsViewController: UIViewController {
     var data: [NewsModel] = []
     var contentType: MostPopularType = .shared
     
+    
     static func create(contentType: MostPopularType) -> NewsViewController {
         let storydoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storydoard.instantiateViewController(withIdentifier: "news") as! NewsViewController
@@ -50,7 +51,11 @@ extension NewsViewController: UITableViewDataSource{
 }
 extension NewsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        switch contentType {
+        case .emailed: ArticleDetailsViewController.create(viewController: self, url: data[indexPath.row].url)
+        case .shared: ArticleDetailsViewController.create(viewController: self, url: data[indexPath.row].url)
+        case .viewed: ArticleDetailsViewController.create(viewController: self, url: data[indexPath.row].url)
+        }
     }
 }
 

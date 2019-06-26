@@ -14,15 +14,12 @@ import SwiftyJSON
 struct NewsModel {
     var title: String
     var subtitle: String
-    
-    init(title: String, subtitle: String) {
-        self.title = title
-        self.subtitle = subtitle
-    }
+    var url: String
     
     init(json: JSON) {
         title = json["title"].stringValue
         subtitle = json["abstract"].stringValue
+        url = json["url"].stringValue
     }
     
     
