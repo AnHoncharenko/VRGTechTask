@@ -64,14 +64,19 @@ extension NewsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsCell
         cell.givingData(model: data[indexPath.row])
-        cell.isFavorit(DataBaseService.shared.isFavorit(id: data[indexPath.row].id))
+        cell.isFavorit(DataBaseService.shared.isDBFavorit(id: data[indexPath.row].id))
         return cell
     }
 }
 extension NewsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        ArticleDetailsViewController.show(on: self, data: data[indexPath.row])
+        let item = data[indexPath.row]
+        WebService.shared.loadContent(url: item.url) { ( html ) in
+            let model = FavoritModel.favoriteFrom(news: item, html: html)
+            ArticleDetailsViewController.show(on: self, data: model)
+        }
+        
     }
 }
 

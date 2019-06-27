@@ -14,26 +14,23 @@ class DataBaseService {
     
     
     
-    func isFavorit(id: String) -> Bool {
-        return !realm.objects(FaforitModel.self).filter("id = '\(id)'").isEmpty
+    func isDBFavorit(id: String) -> Bool {
+        return !realm.objects(FavoritModel.self).filter("id = '\(id)'").isEmpty
     }
 
-    func read() -> Results<FaforitModel> {
-        return realm.objects(FaforitModel.self)
+    func read() -> Results<FavoritModel> {
+        return realm.objects(FavoritModel.self)
     }
     
-    func addModel(model: NewsModel) {
-        let realmData = FaforitModel()
-        realmData.title = model.title
-        realmData.subtitle = model.subtitle
-        realmData.id = model.id
-        try! realm.write {
-            realm.add(realmData)
+    func addModel(model: FavoritModel) {
+        try? realm.write {
+            realm.add(model)
         }
     }
     
-    func delete(_ model: FaforitModel) {
-        try! realm.write {
+    func delete(_ id: String) {
+        guard let model = realm.objects(FavoritModel.self).filter("id = '\(id)'").first else { return }
+        try? realm.write {
             realm.delete(model)
         }
     }

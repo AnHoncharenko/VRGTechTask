@@ -12,6 +12,7 @@ class FavoritsNewsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let data = DataBaseService.shared.read()
     
+    
     static func create() -> FavoritsNewsViewController {
         let storydoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storydoard.instantiateViewController(withIdentifier: "favorits") as! FavoritsNewsViewController
@@ -49,11 +50,12 @@ extension FavoritsNewsViewController: UITableViewDataSource{
 extension FavoritsNewsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        ArticleDetailsViewController.show(on: self, data: data[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .destructive, title: "delete") { (action , indexPath) in
-            DataBaseService.shared.delete(self.data[indexPath.row])
+            DataBaseService.shared.delete(self.data[indexPath.row].id)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
         return [delete]

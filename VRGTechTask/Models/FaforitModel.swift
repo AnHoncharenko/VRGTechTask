@@ -9,10 +9,28 @@
 import Foundation
 import RealmSwift
 
-class FaforitModel: Object {
+class FavoritModel: Object {
     @objc dynamic var id = ""
     @objc dynamic var title = ""
     @objc dynamic var subtitle = ""
-    @objc dynamic var data = ""
+    @objc dynamic var html = ""
 
+    static func favoriteFrom(news: NewsModel, html: String ) -> FavoritModel {
+        let data = FavoritModel()
+        data.id = news.id
+        data.title = news.title
+        data.subtitle = news.subtitle
+        data.html = html
+        return data
+    }
+    
+    func clone() -> FavoritModel {
+        let data = FavoritModel()
+        data.id = id
+        data.title = title
+        data.subtitle = subtitle
+        data.html = html
+        return data
+    }
+    
 }
