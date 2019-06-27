@@ -12,7 +12,6 @@ class FavoritsNewsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let data = DataBaseService.shared.read()
     
-    
     static func create() -> FavoritsNewsViewController {
         let storydoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storydoard.instantiateViewController(withIdentifier: "favorits") as! FavoritsNewsViewController
@@ -35,8 +34,6 @@ class FavoritsNewsViewController: UIViewController {
 
 extension FavoritsNewsViewController: UITableViewDataSource{
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -47,6 +44,7 @@ extension FavoritsNewsViewController: UITableViewDataSource{
         return cell
     }
 }
+
 extension FavoritsNewsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

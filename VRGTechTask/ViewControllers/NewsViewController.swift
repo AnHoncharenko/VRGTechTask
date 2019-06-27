@@ -47,6 +47,7 @@ class NewsViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(refresh), for: UIControl.Event.valueChanged)
         tableView.addSubview(refreshControl)
     }
+    
     @objc func refresh() {
         WebService.shared.mostPopular(type: contentType, cl: {
             self.data = $0
@@ -68,15 +69,15 @@ extension NewsViewController: UITableViewDataSource{
         return cell
     }
 }
+
 extension NewsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let item = data[indexPath.row]
         WebService.shared.loadContent(url: item.url) { ( html ) in
-            let model = FavoritModel.favoriteFrom(news: item, html: html)
+            let model = ContentModel.itemFrom(news: item, html: html)
             ArticleDetailsViewController.show(on: self, data: model)
         }
-        
     }
 }
 

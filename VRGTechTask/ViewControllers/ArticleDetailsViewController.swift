@@ -8,25 +8,21 @@
 
 import UIKit
 
-
 class ArticleDetailsViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
-    var data: FavoritModel!
+    var data: ContentModel!
     var starButton: UIBarButtonItem!
     
-    
-    static func show(on viewController: UIViewController, data: FavoritModel) {
+    static func show(on viewController: UIViewController, data: ContentModel) {
         let storydoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storydoard.instantiateViewController(withIdentifier: "details") as! ArticleDetailsViewController
         vc.data = data.clone()
-        
         viewController.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func viewDidLoad() {
         super .viewDidLoad()
         self.webView.loadHTMLString(data.html, baseURL: nil)
-        
         
         starButton = UIBarButtonItem(image: nil,
                                      style: .done,
@@ -51,6 +47,5 @@ class ArticleDetailsViewController: UIViewController {
             DataBaseService.shared.addModel(model: data.clone())
         }
         updateFavoriteStatus()
-        
     }
 }

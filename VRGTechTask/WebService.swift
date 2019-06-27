@@ -20,7 +20,6 @@ class WebService {
                 cl(response.value ?? "")
         }
     }
-
     
     func mostPopular(type: MostPopularType, cl: @escaping ([NewsModel]) -> Void) {
         let typeString: String

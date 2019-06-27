@@ -1,5 +1,5 @@
 //
-//  FaforitModel.swift
+//  ContentModel.swift
 //  VRGTechTask
 //
 //  Created by Anton Honcharenko on 6/27/19.
@@ -9,14 +9,14 @@
 import Foundation
 import RealmSwift
 
-class FavoritModel: Object {
+class ContentModel: Object {
     @objc dynamic var id = ""
     @objc dynamic var title = ""
     @objc dynamic var subtitle = ""
     @objc dynamic var html = ""
 
-    static func favoriteFrom(news: NewsModel, html: String ) -> FavoritModel {
-        let data = FavoritModel()
+    static func itemFrom(news: NewsModel, html: String ) -> ContentModel {
+        let data = ContentModel()
         data.id = news.id
         data.title = news.title
         data.subtitle = news.subtitle
@@ -24,13 +24,12 @@ class FavoritModel: Object {
         return data
     }
     
-    func clone() -> FavoritModel {
-        let data = FavoritModel()
+    func clone() -> ContentModel {
+        let data = ContentModel()
         data.id = id
         data.title = title
         data.subtitle = subtitle
         data.html = html
         return data
     }
-    
 }

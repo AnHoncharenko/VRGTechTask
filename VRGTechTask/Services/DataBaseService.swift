@@ -12,29 +12,24 @@ class DataBaseService {
     static let shared = DataBaseService()
     let realm = try! Realm()
     
-    
-    
     func isDBFavorit(id: String) -> Bool {
-        return !realm.objects(FavoritModel.self).filter("id = '\(id)'").isEmpty
+        return !realm.objects(ContentModel.self).filter("id = '\(id)'").isEmpty
     }
 
-    func read() -> Results<FavoritModel> {
-        return realm.objects(FavoritModel.self)
+    func read() -> Results<ContentModel> {
+        return realm.objects(ContentModel.self)
     }
     
-    func addModel(model: FavoritModel) {
+    func addModel(model: ContentModel) {
         try? realm.write {
             realm.add(model)
         }
     }
     
     func delete(_ id: String) {
-        guard let model = realm.objects(FavoritModel.self).filter("id = '\(id)'").first else { return }
+        guard let model = realm.objects(ContentModel.self).filter("id = '\(id)'").first else { return }
         try? realm.write {
             realm.delete(model)
         }
     }
-
-    
-    
 }
