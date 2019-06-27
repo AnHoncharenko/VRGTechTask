@@ -41,19 +41,30 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJS-uf-Pcf">
+                                                    <rect key="frame" x="5" y="3" width="5" height="82.5"/>
+                                                    <color key="backgroundColor" red="0.192750853" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="5" id="ccl-Xl-mJ5"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="0Gp-qe-5aI" secondAttribute="trailing" constant="10" id="1RR-kB-5c5"/>
                                                 <constraint firstItem="0Gp-qe-5aI" firstAttribute="leading" secondItem="2FD-qR-pr4" secondAttribute="leading" id="B4s-Ye-e6A"/>
                                                 <constraint firstAttribute="bottom" secondItem="2FD-qR-pr4" secondAttribute="bottom" constant="10" id="MgQ-Ed-lpu"/>
                                                 <constraint firstItem="0Gp-qe-5aI" firstAttribute="trailing" secondItem="2FD-qR-pr4" secondAttribute="trailing" id="Rwp-Xu-GWv"/>
+                                                <constraint firstAttribute="bottom" secondItem="pJS-uf-Pcf" secondAttribute="bottom" constant="3" id="TxR-Nk-wc6"/>
+                                                <constraint firstItem="pJS-uf-Pcf" firstAttribute="top" secondItem="xy5-bs-uXU" secondAttribute="top" constant="3" id="d8N-dZ-E6I"/>
                                                 <constraint firstItem="0Gp-qe-5aI" firstAttribute="leading" secondItem="xy5-bs-uXU" secondAttribute="leading" constant="20" id="dcw-D3-f2s"/>
                                                 <constraint firstItem="2FD-qR-pr4" firstAttribute="top" secondItem="0Gp-qe-5aI" secondAttribute="bottom" constant="8" id="mqx-Ng-TZF"/>
+                                                <constraint firstItem="pJS-uf-Pcf" firstAttribute="leading" secondItem="xy5-bs-uXU" secondAttribute="leading" constant="5" id="pkd-ft-Q2h"/>
                                                 <constraint firstItem="0Gp-qe-5aI" firstAttribute="top" secondItem="xy5-bs-uXU" secondAttribute="top" constant="10" id="teP-qx-RJa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="subtitle" destination="2FD-qR-pr4" id="g8N-0Y-pof"/>
+                                            <outlet property="favoritStatrus" destination="pJS-uf-Pcf" id="r6Q-ga-CEm"/>
+                                            <outlet property="subtitle" destination="2FD-qR-pr4" id="XdI-yy-jzy"/>
                                             <outlet property="title" destination="0Gp-qe-5aI" id="COj-qM-Ai9"/>
                                         </connections>
                                     </tableViewCell>

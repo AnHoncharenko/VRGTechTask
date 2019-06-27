@@ -35,5 +35,6 @@ class ArticleDetailsViewController: UIViewController {
     }
     @objc func favoritStatus() {
         starButton.image = UIImage(named: "emptyStar")
+        
     }
 }

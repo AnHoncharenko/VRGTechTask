@@ -12,6 +12,7 @@ class NewsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var data: [NewsModel] = []
     var contentType: MostPopularType = .shared
+
     var refreshControl = UIRefreshControl()
     @IBOutlet weak var loadingState: UIView!
     
@@ -58,6 +59,9 @@ extension NewsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsCell
         cell.givingData(model: data[indexPath.row])
+        if (indexPath.row % 2) == 1 {
+            cell.favoritStatrus.isHidden = true
+        }
         return cell
     }
 }
