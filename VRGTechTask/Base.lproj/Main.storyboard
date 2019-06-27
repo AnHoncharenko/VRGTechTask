@@ -38,7 +38,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FD-qR-pr4">
                                                     <rect key="frame" x="20" y="48" width="384" height="30.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -59,18 +59,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svn-K3-0cd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="WMV-jI-ZwS">
+                                        <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="WMV-jI-ZwS" firstAttribute="centerY" secondItem="svn-K3-0cd" secondAttribute="centerY" id="taN-re-obL"/>
+                                    <constraint firstItem="WMV-jI-ZwS" firstAttribute="centerX" secondItem="svn-K3-0cd" secondAttribute="centerX" id="wUE-Ag-Q9q"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JpG-5r-6j7" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="D7J-5k-0Rg"/>
+                            <constraint firstAttribute="trailing" secondItem="svn-K3-0cd" secondAttribute="trailing" id="IRt-Ry-PTe"/>
                             <constraint firstItem="JpG-5r-6j7" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="bDs-V0-kJE"/>
+                            <constraint firstAttribute="bottom" secondItem="svn-K3-0cd" secondAttribute="bottom" id="bt7-BY-PYZ"/>
                             <constraint firstItem="JpG-5r-6j7" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="eTM-Mt-sme"/>
+                            <constraint firstItem="svn-K3-0cd" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="k1e-bF-N3l"/>
                             <constraint firstItem="JpG-5r-6j7" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="tnj-m4-gWb"/>
+                            <constraint firstItem="svn-K3-0cd" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="wWz-K2-Por"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="loadingState" destination="svn-K3-0cd" id="FVk-WP-ZAr"/>
                         <outlet property="tableView" destination="JpG-5r-6j7" id="od2-K3-SQW"/>
                     </connections>
                 </viewController>
@@ -87,16 +105,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VLY-KT-3bc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VLY-KT-3bc" firstAttribute="leading" secondItem="fGS-RY-G7N" secondAttribute="leading" id="9fu-33-DMQ"/>
-                            <constraint firstItem="fGS-RY-G7N" firstAttribute="bottom" secondItem="VLY-KT-3bc" secondAttribute="bottom" id="C2d-EV-UcZ"/>
-                            <constraint firstItem="fGS-RY-G7N" firstAttribute="trailing" secondItem="VLY-KT-3bc" secondAttribute="trailing" id="WSc-ew-TGn"/>
-                            <constraint firstItem="VLY-KT-3bc" firstAttribute="top" secondItem="fGS-RY-G7N" secondAttribute="top" id="gnN-qK-Skg"/>
+                            <constraint firstItem="VLY-KT-3bc" firstAttribute="leading" secondItem="M9O-tS-1da" secondAttribute="leading" id="9fu-33-DMQ"/>
+                            <constraint firstAttribute="bottom" secondItem="VLY-KT-3bc" secondAttribute="bottom" id="C2d-EV-UcZ"/>
+                            <constraint firstAttribute="trailing" secondItem="VLY-KT-3bc" secondAttribute="trailing" id="WSc-ew-TGn"/>
+                            <constraint firstItem="VLY-KT-3bc" firstAttribute="top" secondItem="M9O-tS-1da" secondAttribute="top" id="gnN-qK-Skg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fGS-RY-G7N"/>
                     </view>

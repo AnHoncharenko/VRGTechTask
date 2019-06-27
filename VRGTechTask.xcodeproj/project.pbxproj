@@ -22,6 +22,7 @@
 		9369D77322C3509E0061D352 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D77222C3509E0061D352 /* MainTabBar.swift */; };
 		9369D77522C35E2B0061D352 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D77422C35E2B0061D352 /* ArticleDetailsViewController.swift */; };
 		9369D77722C371690061D352 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D77622C371690061D352 /* NewsCell.swift */; };
+		9369D77922C3C40A0061D352 /* FavoritsNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9369D77822C3C40A0061D352 /* FavoritsNewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		9369D77222C3509E0061D352 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		9369D77422C35E2B0061D352 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
 		9369D77622C371690061D352 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		9369D77822C3C40A0061D352 /* FavoritsNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritsNewsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				9369D76722C284250061D352 /* NewsModel.swift */,
 				9369D74722C274280061D352 /* NewsViewController.swift */,
 				9369D77422C35E2B0061D352 /* ArticleDetailsViewController.swift */,
+				9369D77822C3C40A0061D352 /* FavoritsNewsViewController.swift */,
 				9369D76F22C2A6800061D352 /* NewsRequestType.swift */,
 				9369D74B22C274280061D352 /* Main.storyboard */,
 				9369D74E22C274290061D352 /* Assets.xcassets */,
@@ -331,6 +334,7 @@
 				9369D77322C3509E0061D352 /* MainTabBar.swift in Sources */,
 				9369D74622C274280061D352 /* AppDelegate.swift in Sources */,
 				9369D76C22C29B7E0061D352 /* Config.swift in Sources */,
+				9369D77922C3C40A0061D352 /* FavoritsNewsViewController.swift in Sources */,
 				9369D76A22C299A80061D352 /* WebService.swift in Sources */,
 				9369D77522C35E2B0061D352 /* ArticleDetailsViewController.swift in Sources */,
 				9369D74822C274280061D352 /* NewsViewController.swift in Sources */,
