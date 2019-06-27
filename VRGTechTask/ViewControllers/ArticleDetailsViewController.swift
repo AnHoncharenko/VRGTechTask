@@ -8,33 +8,33 @@
 
 import UIKit
 
+
 class ArticleDetailsViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
-    var data:[NewsModel] = []
-    var url:String = ""
+    var data:NewsModel?
     var favoritStat = true
     var starButton: UIBarButtonItem!
     
-    static func show(on viewController: UIViewController, url: String) {
+    static func show(on viewController: UIViewController, data: NewsModel) {
         let storydoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storydoard.instantiateViewController(withIdentifier: "details") as! ArticleDetailsViewController
-        vc.url = url
+        vc.data = data
         viewController.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func viewDidLoad() {
         super .viewDidLoad()
-        let request = URLRequest(url: URL.init(string: url)!)
+        let request = URLRequest(url: URL.init(string: data!.url)!)
         self.webView.loadRequest(request)
-        starButton = UIBarButtonItem(image: UIImage(named: "pullStar"),
+        starButton = UIBarButtonItem(image: UIImage(named: "emptyStar"),
                                      style: .done,
                                      target: self,
-                                     action: #selector(favoritStatus))
+                                     action: #selector(addInFavorit))
         navigationItem.rightBarButtonItem = starButton
 
     }
-    @objc func favoritStatus() {
-        starButton.image = UIImage(named: "emptyStar")
-        
+    @objc func addInFavorit() {
+        starButton.image = UIImage(named: "pullStar")
+        DataBaseService.shared.addModel(model: data!)
     }
 }

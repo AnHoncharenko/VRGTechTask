@@ -10,6 +10,7 @@ import UIKit
 
 class FavoritsNewsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    let data = DataBaseService.shared.read()
     
     static func create() -> FavoritsNewsViewController {
         let storydoard = UIStoryboard(name: "Main", bundle: nil)
@@ -18,24 +19,30 @@ class FavoritsNewsViewController: UIViewController {
         return vc
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super .viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        
     }
 }
 
 extension FavoritsNewsViewController: UITableViewDataSource{
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsCell
-        cell.givingData(model: NewsModel.init(title: "123456789012", subtitle: "12831837183781273871289378912738172387127391723871823"))
+        cell.givingData(model:NewsModel.init(title: data[indexPath.row].title, subtitle: data[indexPath.row].subtitle))
         return cell
     }
 }
@@ -45,7 +52,10 @@ extension FavoritsNewsViewController: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "delete") { (action , indexPath) in }
+        let delete = UITableViewRowAction(style: .destructive, title: "delete") { (action , indexPath) in
+            DataBaseService.shared.delete(self.data[indexPath.row])
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
         return [delete]
     }
 }

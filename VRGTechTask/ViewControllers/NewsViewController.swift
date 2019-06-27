@@ -28,6 +28,11 @@ class NewsViewController: UIViewController {
         return vc
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         WebService.shared.mostPopular(type: contentType, cl: {
@@ -59,22 +64,14 @@ extension NewsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewsCell
         cell.givingData(model: data[indexPath.row])
-        if (indexPath.row % 2) == 1 {
-            cell.favoritStatrus.isHidden = true
-        }
+        cell.isFavorit(DataBaseService.shared.isFavorit(id: data[indexPath.row].id))
         return cell
     }
 }
 extension NewsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        ArticleDetailsViewController.show(on: self, url: data[indexPath.row].url)
-    }
-    
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let addFavorits = UITableViewRowAction(style: .destructive, title: "add") { (action , indexPath) in  }
-        addFavorits.backgroundColor = UIColor.green
-        return [addFavorits]
+        ArticleDetailsViewController.show(on: self, data: data[indexPath.row])
     }
 }
 

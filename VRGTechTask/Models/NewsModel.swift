@@ -9,24 +9,23 @@
 import Foundation
 import SwiftyJSON
 
-
-
 struct NewsModel {
-    var title: String
-    var subtitle: String
-    var url: String
+    let id: String
+    let title: String
+    let subtitle: String
+    let url: String
     
     init(json: JSON) {
+        id = json["id"].stringValue
         title = json["title"].stringValue
         subtitle = json["abstract"].stringValue
         url = json["url"].stringValue
     }
+    
     init(title: String, subtitle: String) {
+        self.id = ""
         self.title = title
         self.subtitle = subtitle
         self.url = ""
     }
-    
-    
-    
 }

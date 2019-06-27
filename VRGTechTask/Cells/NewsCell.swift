@@ -14,6 +14,12 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var favoritStatrus: UIView!
 
     
+    func isFavorit(_ flag: Bool) {
+        if flag == true {
+            self.favoritStatrus.isHidden = false
+        } else {self.favoritStatrus.isHidden = true }
+    }
+    
     func givingData(model: NewsModel) {
         title.text = model.title
         subtitle.text = model.subtitle

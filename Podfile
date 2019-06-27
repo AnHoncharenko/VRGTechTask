@@ -7,7 +7,7 @@ target 'VRGTechTask' do
 
   pod 'Alamofire', '~> 4.8.2'
   pod 'SwiftyJSON', '~> 5.0.0'
-  pod 'Realm', '~> 3.15.0'
+  pod 'RealmSwift', '~> 3.15.0'
 
   target 'VRGTechTaskTests' do
     inherit! :search_paths
