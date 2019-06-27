@@ -15,7 +15,8 @@ class MainTabBar: UITabBarController, UITabBarControllerDelegate {
         self.delegate = self
         self.viewControllers = [NewsViewController.create(contentType: .emailed),
                                 NewsViewController.create(contentType: .shared),
-                                NewsViewController.create(contentType: .viewed)]
+                                NewsViewController.create(contentType: .viewed),
+                                FavoritsNewsViewController.create()]
         title = selectedViewController?.title
     }
     

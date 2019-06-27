@@ -12,6 +12,7 @@ class ArticleDetailsViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     var data:[NewsModel] = []
     var url:String = ""
+    var favoritStat = true
     var starButton: UIBarButtonItem!
     
     static func show(on viewController: UIViewController, url: String) {

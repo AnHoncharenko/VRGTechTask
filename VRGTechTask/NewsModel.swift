@@ -21,6 +21,11 @@ struct NewsModel {
         subtitle = json["abstract"].stringValue
         url = json["url"].stringValue
     }
+    init(title: String, subtitle: String) {
+        self.title = title
+        self.subtitle = subtitle
+        self.url = ""
+    }
     
     
     
